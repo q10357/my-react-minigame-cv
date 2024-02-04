@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-const ChatBubble = ({ characterPosition }) => {
+export const ChatBubble = ({ characterPosition }) => {
    //const chatBubbleStyle = {
     //left: `${characterPosition + 50}px`, // Adjust positioning based on your needs
   //};
@@ -10,5 +10,3 @@ const ChatBubble = ({ characterPosition }) => {
   //  return <div className={styles.main} style={chatBubbleStyle}>Hello!</div>;
 
 };
-
-export default ChatBubble;
