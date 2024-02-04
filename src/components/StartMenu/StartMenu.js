@@ -1,13 +1,9 @@
 import styles from './styles.module.css';
 import styled, { keyframes } from 'styled-components';
-import React, { useState, useEffect } from 'react';
 
 export const StartMenu = ({ onStartClick }) => {
   return (
   <StartMenuContainer>
-  <div className="animated-border" id="borderElement">
-
-  </div>
     <button className={styles.startButton} onClick={onStartClick}>
       Start Game
     </button>
@@ -16,24 +12,22 @@ export const StartMenu = ({ onStartClick }) => {
 }
 
 const changeColor = keyframes`
-  0% { border-color: red; }
-  25% { border-color: blue; }
-  50% { border-color: green; }
-  75% { border-color: yellow; }
-  100% { border-color: red; }
+  0% { border-color: blue;}
+  
 `;
 
 const changeType = keyframes`
-  0%, 100% { border-style: solid; }
   25%, 75% { border-style: dashed; }
   50% { border-style: dotted; }
 `;
 
 const StartMenuContainer = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 45%;
+  height: 25%;
   border-width: 2px;
   border-style: solid;
-  transition: all 0.5s ease-in-out;
-  animation: ${changeColor} 4s infinite alternate, ${changeType} 4s infinite alternate;
+  background-color: white;
+  border-radius: 12px;
+  transition: all 100s ease-in-out;
+  animation: ${changeColor} 20s infinite alternate, ${changeType} 20s infinite alternate;
 `;
